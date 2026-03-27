@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Norse-Bold";
+  src: url(./font/Norse-Bold.otf) format("opentype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(225, 100%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-credit {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: white;
+  white-space: nowrap;
+}
+
+legend {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 100px;
+  font-weight: 550;
+  color: #0c0e0b;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:focus {
+  border: 2px solid #596d48;
+  outline: none;
+  box-shadow: 0 0 5px rgba(89, 109, 72, 0.3);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  position: relative;
+  background-image: url(images/halie-west-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25vw;
+  height: 100vh;
+}
+
+.logo {
+  width: auto;
+  height: 80%;
+}
+
+.logo-container {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: 100px;
+  font-family: "Norse-Bold", sans-serif;
+  letter-spacing: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.507);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 70px;
+}
+
+.right {
+  position: relative;
+  background-color: white;
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 200px;
+}
+
+.bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 34vh;
+  background-color: #dcdddc31;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 26vh;
+  background-color: #dcdddc31;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 5px;
+  width: 40%;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 70%;
+  height: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.buttons {
+  z-index: 1;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+  width: 80%;
+  height: 40px;
+  background-color: #596d48;
+  color: white;
+  border: 2px solid #596d48;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #4a5a3c;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: #596d48;
+}
+
+a:hover {
+  text-decoration: underline;
+}
