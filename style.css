@@ -2,57 +2,28 @@
   font-family: "Norse-Bold";
   src: url(./font/Norse-Bold.otf) format("opentype");
 }
-
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
   background-color: hsl(225, 100%, 94%);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.image-credit {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 10px;
-  color: white;
-  white-space: nowrap;
-}
-
-legend {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.header {
-  font-size: 20px;
-  margin-top: 10px;
-  margin-right: 100px;
-  font-weight: 550;
-  color: #0c0e0b;
-}
-
-input:invalid {
-  border: 2px solid red;
-}
-
-input:focus {
-  border: 2px solid #596d48;
-  outline: none;
-  box-shadow: 0 0 5px rgba(89, 109, 72, 0.3);
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .container {
+  width: 100vw;
+  min-width: 300px;
+  height: 100vh;
+  min-height: 600px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .left {
@@ -71,9 +42,9 @@ input:focus {
 
 .logo-container {
   position: absolute;
-  height: 100px;
+  height: 15vh;
   width: 100%;
-  top: 100px;
+  top: 20vh;
   font-family: "Norse-Bold", sans-serif;
   letter-spacing: 5px;
   color: white;
@@ -86,56 +57,73 @@ input:focus {
 
 h1 {
   font-weight: 500;
-  font-size: 70px;
+  font-size: 40px;
+}
+
+.image-credit {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: white;
+  white-space: nowrap;
+}
+.image-credit a {
+  color: white;
+  text-decoration-line: underline;
 }
 
 .right {
   position: relative;
-  background-color: white;
-  width: 75%;
+  background-color: rgba(236, 236, 236, 0.815);
+  width: 75vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 200px;
-}
-
-.bg-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 34vh;
-  background-color: #dcdddc31;
-}
-
-.bg-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 26vh;
-  background-color: #dcdddc31;
-  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.3);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
 }
 
 form {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form-header {
+  font-size: clamp(10px, 5vw, 20px);
+  padding: 20px;
+  font-weight: 550;
+  color: #0c0e0b;
+  height: 35vh;
+}
+
+.form-main {
+  top: 35vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
+  gap: 10px;
+  font-size: clamp(10px, 5vw, 18px);
+  height: 30vh;
+  background-color: white;
+}
+
+legend {
+  font-size: clamp(10px, 5vw, 20px);
+
+  font-weight: bold;
+  margin: 0;
+  padding-top: 20px;
+}
+fieldset {
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(9, 43, 196, 0.1);
 }
 
 .elements {
@@ -143,30 +131,43 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  font-size: clamp(8px, 5vw, 15px);
   gap: 5px;
   width: 40%;
+  flex: 1 1 40%;
   margin-bottom: 5px;
 }
 
 input {
   width: 70%;
   height: 20px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #2b5a27;
+  box-shadow: 0 0 5px rgba(72, 79, 109, 0.1);
 }
 
-.buttons {
-  z-index: 1;
-  margin-top: 20px;
+input:invalid {
+  border: 1px solid red;
+}
+
+input:focus {
+  border: 1px solid #3d20bd;
+  outline: none;
+  box-shadow: 0 0 5px rgba(72, 79, 109, 0.3);
+}
+
+.form-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
   gap: 10px;
+  padding: 20px;
+  height: 30vh;
 }
 
 button {
   cursor: pointer;
-  width: 80%;
+  width: 20%;
   height: 40px;
   background-color: #596d48;
   color: white;
